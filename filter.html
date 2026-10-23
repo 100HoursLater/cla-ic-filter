@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+  <input type="text" id="userinput" placeholder="Type something...">
+  <button onclick="filterText()">Filter</button>
+  <p id="output"></p>
+
+  <script>
+    function filterText() {
+      let userinput = document.getElementById("userinput").value
+
+      const awords = ["ass", "ASS", "azz", "AZZ"]
+      const cwords = ["cunt", "Cunt", "CUNT", "Cnnt"]
+      const fwords = ["fuck", "Fuck", "FUCK", "Fnck"]
+      const swords = ["shit", "Shit", "SHIT", "s-hit"]
+      const dwords = ["dick", "Dick", "DICK", "dlck"]
+      const racialwords = ["nigga", "Nigga", "NIGGA", "n!gga", "N!gga", "N!GGA", "nigger", "Nigger", "NIGGER", "n!gger", "N!gger", "N!GGER"]
+
+      for (const word of awords) {userinput = userinput.replaceAll(word, "a**")}
+      for (const rword of cwords) {userinput = userinput.replaceAll(rword, "c***")}
+      for (const iword of fwords) {userinput = userinput.replaceAll(iword, "f***")}
+      for (const uword of swords) {userinput = userinput.replaceAll(uword, "s***")}
+      for (const pword of dwords) {userinput = userinput.replaceAll(pword, "d***")}
+      for (const bword of racialwords) {userinput = userinput.replaceAll(bword, "abhorrent word")}
+
+      document.getElementById("output").textContent = userinput
+    }
+  </script>
+
+</body>
+</html>
